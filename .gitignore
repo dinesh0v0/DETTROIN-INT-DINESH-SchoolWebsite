@@ -1,0 +1,31 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+
+# Environment files — exclude all .env files with secrets
+.env*
+# But allow .env.example files (no secrets)
+!.env.example
+!backend/.env.example
+
+# Backend secrets (never commit)
+backend/.env
+backend/node_modules/
+
+# Atlas credentials (never commit)
+atlas-credentials.env
+
+# Test/dummy files
+dummy_resume.pdf
+
+# Scratch/temp files
+urls.txt
+metadata.json
+bun.lock
+
+# AI Studio artifacts
+assets/.aistudio/
+Assignment/
