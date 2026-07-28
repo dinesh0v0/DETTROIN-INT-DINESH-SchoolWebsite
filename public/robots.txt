@@ -1,0 +1,8 @@
+# Krishna International School — robots.txt
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /portal
+
+# Sitemap
+Sitemap: https://dettroin-int-dinesh-school-website.vercel.app/sitemap.xml

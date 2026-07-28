@@ -1,0 +1,21 @@
+# Render.com deployment config for the Express backend
+# Docs: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: kis-backend
+    env: node
+    region: singapore
+    plan: free
+    rootDir: backend
+    buildCommand: npm install --legacy-peer-deps
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGO_URI
+        sync: false   # Set this manually in Render dashboard
+      - key: FRONTEND_URL
+        sync: false   # Set to your Vercel deployment URL
